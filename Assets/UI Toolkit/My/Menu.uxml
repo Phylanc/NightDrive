@@ -1,0 +1,45 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/My/MenuStyle.uss?fileID=7433441132597879392&amp;guid=e62d3813f8d6d2d4194fae18c9e4a1c2&amp;type=3#MenuStyle"/>
+    <ui:VisualElement name="menu-root" class="menu-root">
+        <ui:VisualElement name="menu-container" class="menu-container" style="opacity: 1; position: relative;">
+            <ui:VisualElement class="title-block">
+                <ui:Label name="game-title" text="NEVER EXCITED" class="game-title"/>
+                <ui:Label name="game-subtitle" text="— DVRST —" class="game-subtitle"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="divider"/>
+            <ui:VisualElement name="buttons-group" class="buttons-group">
+                <ui:Button name="btn-start" text="НАЧАТЬ ИГРУ" class="menu-btn btn-primary"/>
+                <ui:VisualElement name="settings-wrapper" class="settings-wrapper">
+                    <ui:Button name="btn-settings" text="НАСТРОЙКИ" class="menu-btn btn-settings"/>
+                    <ui:VisualElement name="settings-panel" class="settings-panel hidden">
+                        <ui:Label text="АУДИО" class="settings-section-label"/>
+                        <ui:VisualElement class="settings-row">
+                            <ui:Label text="Музыка" class="settings-label"/>
+                            <ui:VisualElement class="slider-track-wrap">
+                                <ui:Slider name="slider-music" low-value="0" high-value="100" value="80" class="settings-slider"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-music-val" text="80" class="settings-value"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="settings-row">
+                            <ui:Label text="Звуки" class="settings-label"/>
+                            <ui:VisualElement class="slider-track-wrap">
+                                <ui:Slider name="slider-sfx" low-value="0" high-value="100" value="100" class="settings-slider"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-sfx-val" text="100" class="settings-value"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="settings-separator"/>
+                        <ui:Label text="ЭКРАН" class="settings-section-label"/>
+                        <ui:VisualElement class="settings-row">
+                            <ui:Label text="Разрешение" class="settings-label"/>
+                            <ui:DropdownField name="dropdown-resolution" choices="1920×1080,2560×1440,1280×720,3840×2160" index="0" class="settings-dropdown"/>
+                        </ui:VisualElement>
+                        <ui:Button name="btn-settings-close" text="Закрыть" class="settings-close-btn"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Button name="btn-credits" text="ТИТРЫ" class="menu-btn"/>
+                <ui:Button name="btn-quit" text="ВЫХОД ИЗ ИГРЫ" class="menu-btn btn-danger"/>
+            </ui:VisualElement>
+            <ui:Label text="v0.1.0  ·  © 2026 ПРОТОТИП" class="footer-label"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
