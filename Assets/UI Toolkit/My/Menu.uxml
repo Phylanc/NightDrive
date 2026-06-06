@@ -1,10 +1,10 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/My/MenuStyle.uss?fileID=7433441132597879392&amp;guid=e62d3813f8d6d2d4194fae18c9e4a1c2&amp;type=3#MenuStyle"/>
-    <ui:VisualElement name="menu-root" class="menu-root">
-        <ui:VisualElement name="menu-container" class="menu-container" style="opacity: 1; position: relative;">
+    <ui:VisualElement name="menu-root" class="menu-root" style="left: 0; top: 0;">
+        <ui:VisualElement name="menu-container" class="menu-container" style="position: absolute; left: 0;">
             <ui:VisualElement class="title-block">
-                <ui:Label name="game-title" text="NEVER EXCITED" class="game-title"/>
-                <ui:Label name="game-subtitle" text="— DVRST —" class="game-subtitle"/>
+                <ui:Label name="game-title" text="NightDriver" class="game-title"/>
+                <ui:Label name="game-subtitle" text="vol.1" class="game-subtitle"/>
             </ui:VisualElement>
             <ui:VisualElement class="divider"/>
             <ui:VisualElement name="buttons-group" class="buttons-group">
@@ -36,7 +36,15 @@
                         <ui:Button name="btn-settings-close" text="Закрыть" class="settings-close-btn"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:Button name="btn-credits" text="ТИТРЫ" class="menu-btn"/>
+                <ui:VisualElement name="credits-wrapper" class="credits-wrapper">
+                    <ui:Button name="btn-credits" text="ТИТРЫ" class="menu-btn btn-credits-toggle"/>
+                    <ui:VisualElement name="credits-panel" class="credits-panel hidden">
+                        <ui:Label text="АВТОРЫ МУЗЫКИ" class="credits-section-label"/>
+                        <ui:Label text="▶ SPOTIFY" class="credits-platform-label"/>
+                        <ui:VisualElement name="credits-items-container" class="credits-items-container"/>
+                        <ui:Button name="btn-credits-close" text="Закрыть" class="settings-close-btn"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
                 <ui:Button name="btn-quit" text="ВЫХОД ИЗ ИГРЫ" class="menu-btn btn-danger"/>
             </ui:VisualElement>
             <ui:Label text="v0.1.0  ·  © 2026 ПРОТОТИП" class="footer-label"/>
