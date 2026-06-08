@@ -18,7 +18,7 @@ public struct CreditsEntry
 {
     [Tooltip("Например: return — Øneheart")]
     public string displayName;
-    [Tooltip("Ссылка на Spotify (или любую другую)")]
+    [Tooltip("Ссылка на Spotify ")]
     public string url;
 }
 
